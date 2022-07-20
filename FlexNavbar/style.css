@@ -1,0 +1,47 @@
+.nav{
+    width: auto;
+    background-color: black;
+    margin: 0px auto;
+    display:flex;
+    justify-content: flex-end;
+    font-family: sans-serif;
+
+}
+.nav-title{
+    color:white;
+    padding:5px;
+    margin-right:auto;
+    align-items: center;
+    
+}
+
+.nav-links{
+ 
+    padding:5px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  
+}
+
+.nav-links a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+.nav-links a:hover {
+    background: rgb(22,162,180);
+  }
+
+.btn{
+    background-color: rgb(22, 162, 180);
+    color: white;
+    border: 2px solid  black;
+    box-shadow: 5px 2px 2px black;
+    padding: .5rem 1rem;  
+    font-size: 1rem; 
+
+
+}
