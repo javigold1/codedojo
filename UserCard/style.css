@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+.container{
+    width: 700px;
+    height: 300px;
+    background-color: white;
+    margin: 40px;
+    display:flex;
+    flex-flow: column;
+    border: 3px solid lightgrey;
+    
+}
+
+.containertopbar{
+    background-color: darkcyan;
+    padding: 40px;
+
+}
+.connectionimage{
+    margin-left: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left:65px;
+    
+}
+.connectionname{
+    margin-left: 20px;
+    font-size: larger;
+    padding: 45px 0px 0px;
+    font-weight: bold;
+
+}
+.connectioncity{
+    margin-left: 20px;
+    padding: 5px 0px;
+     
+}
+.connectioncity span{
+    display: inline;
+    padding: 5px;
+    font-weight: bold;
+}
+.connectioninfo{
+    margin-left: 20px;
+    padding: 5px 0px;
+
+
+}
+.connectionedit{
+    margin-left: 20px;
+    padding: 5px 0px;
+    flex-wrap: nowrap;
+
+
+}
+.connectionedit a{
+    padding-left: 10px;
+}
