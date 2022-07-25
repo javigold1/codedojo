@@ -1,0 +1,214 @@
+* {
+    font-family: sans-serif;
+    margin:0px;
+    padding:0px;
+
+  }
+.container {
+    font-family: sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+/* Begin Nav*/
+.nav{
+    width: auto;
+    background-color: black;
+    margin: 0px auto;
+    display:flex;
+    justify-content: flex-end;
+    font-family: sans-serif;
+
+}
+.nav-title{
+    color:white;
+    margin-right:auto;
+    padding: 10px 30px;
+    
+}
+
+.nav-links{
+ 
+    padding:5px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  
+}
+
+.nav-links a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+.nav-links a:hover {
+    background: rgb(22,162,180);
+  }
+
+.btn{
+    background-color: rgb(22, 162, 180);
+    color: white;
+    border: 2px solid  black;
+    box-shadow: 5px 2px 2px black;
+    padding: .5rem 1rem;  
+  
+}
+/*end nav*/
+
+.main {
+    margin:0 auto;
+    width: 750px;
+    display: flex;
+
+}
+
+.mainleft{
+    flex:2;
+    margin-right: 10px;
+}
+
+.mainright{
+    flex:1;
+}
+
+.blktitle{
+    color:white;
+    margin-right:auto;
+    padding: 10px 20px;
+    background-color: black;
+    font-weight: bold;
+
+}
+.blktitle span{
+    color:black;
+    background-color: lightgray;
+    border-radius: 50%;
+    padding: 1px 5px;
+    margin: 5px;
+
+}
+
+/* Begin Card*/
+
+.card{
+    /* width: px; */
+    height: 300px;
+    background-color: white;
+    margin-top: 40px;
+    display:flex;
+    flex-flow: column;
+    border: 3px solid lightgrey;
+    
+}
+
+.cardtopbar{
+    background-color: darkcyan;
+    padding: 40px;
+    position: relative;
+
+}
+.cardimage{
+    margin-left: 0px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    
+    
+}
+.cardname{
+    margin-left: 20px;
+    font-size: larger;
+    padding: 45px 0px 0px;
+    font-weight: bold;
+
+}
+.cardcity{
+    margin-left: 20px;
+    padding: 5px 0px;
+     
+}
+.cardcity span{
+    display: inline;
+    padding: 5px;
+    font-weight: bold;
+}
+.cardinfo{ 
+    margin-left: 20px;
+    padding: 5px 0px;
+
+
+}
+.cardedit{
+    margin-left: 20px;
+    padding: 5px 0px;
+    flex-wrap: nowrap;
+
+
+}
+.cardedit a{
+    padding-left: 10px;
+}
+/*end card*/
+
+/* begin education */
+.educationbox{
+    margin-top: 10px;
+    border: 3px solid lightgrey;
+
+}
+.educationtitle{
+    color:white;
+    margin-right:auto;
+    padding: 10px 20px;
+    background-color: black;
+    font-weight: bold;
+
+}
+.educationheader{
+    color:black;
+    margin-right:auto;
+    padding: 10px 20px;
+    background-color: white;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.educationdate{
+    color:gray;
+    margin-right:auto;
+    padding: 0px 0px 5px 20px;
+}
+.educationdescription{
+    color:black;
+    margin-right:auto;
+    padding-left: 20px;
+}
+/* end education */
+/* begin connection requests */
+.connectionbox{
+    margin-top: 40px;
+    border: 3px solid lightgrey;
+
+}
+.connectionlist{
+
+}
+.connectionname{
+    padding:5px;
+    display: flex;
+}
+.connectionname span{
+    width: 100px;
+    padding: 5px;
+}
+.connectionname img{
+    padding-right:5px;
+    vertical-align: bottom;
+
+}
+.connectionviewmore{
+    border-top: 3px solid lightgrey;
+    padding: 5px 
+}
