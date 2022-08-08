@@ -48,21 +48,3 @@ my_account.make_deposit(30)
 print(f"The account balance is:  {(my_account.display_user_balance())}")
 
 
-# my_account = BankAccount(.03, 1000)
-# your_account = BankAccount(.01, 2000)
-
-# my_account.deposit(10)
-# my_account.deposit(30)
-# my_account.deposit(4)
-# my_account.withdraw(10)
-# my_account.yield_interest()
-# print(my_account.display_account_info())
-
-# your_account.deposit(20)
-# your_account.deposit(5)
-# your_account.withdraw(30)
-# your_account.withdraw(40)
-# your_account.withdraw(10)
-# your_account.withdraw(5)
-# your_account.yield_interest()
-# print(your_account.display_account_info())

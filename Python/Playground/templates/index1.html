@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Playgound</title>
+
+</head>
+
+<style>
+    .container {
+        width: 950px;
+        margin: 0px auto;
+        padding: 20px;
+    }
+
+    .sub-content {
+        height: 200px;
+        width: 210px;
+        background-color: {{color}};
+        margin: 10px;
+        border: solid black 2px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        /* TODO - what should go here? */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            {% for i in range(num) %}
+            <div class="sub-content">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

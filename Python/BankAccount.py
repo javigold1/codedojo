@@ -1,22 +1,27 @@
 class BankAccount:
+    """Bank Account Class"""
 
     def __init__(self, int_rate, balance):
         self.int_rate = int_rate
         self.balance = balance
 
     def deposit(self, amount):
+        """dummy docstring"""
         self.balance += amount
 
     def withdraw(self, amount):
+        """dummy docstring"""
         self.balance -= amount
 
     def display_account_info(self):
+        """dummy docstring"""
         return_value = ''
         for attr in self.__dict__.items():
             return_value += f"{str(attr)} \n"
         return(return_value)
 
     def yield_interest(self):
+        """dummy docstring"""
         if self.balance > 0:
             self.balance *= (1 - self.int_rate)
 
