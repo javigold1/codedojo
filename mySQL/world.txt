@@ -1,0 +1,47 @@
+1. 
+select countries.name, languages.language, languages.percentage 
+from countries 
+left join languages on countries.id = languages.country_id 
+where languages.language in ('Slovene')
+order by languages.percentage desc;
+
+2.
+select distinct(countries.name), (select count(*) from cities where country_id in (countries.id)) as num_cities
+from countries 
+left join cities on countries.id = cities.country_id 
+order by num_cities desc;
+
+3.
+select cities.name, cities.population 
+from cities
+left join countries on cities.country_id = countries.id
+where countries.name = 'Mexico' and cities.population >= 500000;
+
+4.
+Select countries.name, languages.language, languages.percentage 
+from countries
+left join languages on countries.id = languages.country_id 
+where languages.percentage > 89
+order by languages.percentage desc;
+
+5.
+Select countries.name, countries.population, countries.surface_area
+from countries
+where countries.population > 100000 and countries.surface_area < 501;
+
+6.
+Select countries.name 
+from countries
+where countries.government_form in ('Constitutional Monarchy') and countries.capital > 200 and countries.life_expectancy > 75;
+
+7.
+Select countries.name as 'Country Name', cities.name as 'City Name', cities.district, cities.population
+from countries
+left join cities on countries.id = cities.country_id 
+where cities.district in ('Buenos Aires') and cities.population > 500000;
+
+8.
+Select distinct(countries.region) as reg_name, (select COUNT(DISTINCT countries.code) from countries where countries.region = reg_name) as num_countries
+from countries
+order by num_countries desc;
+

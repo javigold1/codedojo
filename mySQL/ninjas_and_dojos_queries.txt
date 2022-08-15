@@ -1,0 +1,33 @@
+/* Query: Create 3 new dojos */
+insert into	dojos_and_ninjas.dojos (name) values ('dojo1');
+insert into	dojos_and_ninjas.dojos (name) values ('dojo2');
+insert into	dojos_and_ninjas.dojos (name) values ('dojo3');
+
+/* Query: Delete the 3 dojos you just created */
+delete from dojos_and_ninjas.dojos where dojos_and_ninjas.dojos.name in ('dojo1','dojo2','dojo3');
+
+/* Query: Create 3 more dojos */
+insert into	dojos_and_ninjas.dojos (name) values ('dojo4');
+insert into	dojos_and_ninjas.dojos (name) values ('dojo5');
+insert into	dojos_and_ninjas.dojos (name) values ('dojo6');
+
+/* Query: Create 3 ninjas that belong to the first dojo */
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Jeff', 'Ford', '4');
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Bill', 'Ward', '4');
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Joe', 'Smith', '4');
+
+/* Query: Create 3 ninjas that belong to the second dojo */
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Jim', 'Ford', '5');
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Sammy', 'Ward', '5');
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Bill', 'Smith', '5');
+
+/* Query: Create 3 ninjas that belong to the third dojo */
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Jim', 'Smith', '6');
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Lucy', 'Jones', '6');
+insert into	dojos_and_ninjas.ninjas (first_name,last_name,dojos_id) values ('Linda', 'Smith', '6');
+
+Select * from dojos_and_ninjas.ninjas where dojos_id = '4';
+
+Select * from dojos_and_ninjas.ninjas where dojos_id = '6';
+
+Select * from dojos_and_ninjas.ninjas order by id desc limit 1 ;

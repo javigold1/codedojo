@@ -1,36 +1,31 @@
-# from ctypes import cast
-from flask import Flask, render_template
-# Import Flask to allow us to create our app
-# Create a new instance of the Flask class called "app"
+from flask import Flask, render_template, redirect, request, session
 app = Flask(__name__)
+app.secret_key = 'banana'
 
-
-# The "@" decorator associates this route with the function immediately following
 @app.route('/')
-def index():
-    return render_template("index.html")
+def default():
+    if 'count' in session:
+        session['count'] += 1
+    else:
+        session['count'] = 0
+
+    return render_template('counter.html',counter = session['count'])
+
+@app.route('/add')
+def add3():
+    if 'count' in session:
+        session['count'] += 2
+    else:
+        session['count'] = 3
+    return redirect('/')
 
 
-@app.route('/play')
-def play():
-    return render_template("index.html")
+@app.route('/destroy_session')
+def destory_session():
+    session.clear()		# clears all keys
+    return redirect('/')
 
 
-# for a route '/hello/____' anything after '/hello/' gets passed as a variable 'name'
 
-@app.route('/play/<int:num>')
-def display_num(num):
-    id = int(num)
-    color = "dodgerblue"
-    return render_template('index1.html', num=id, color=color)
-
-
-@app.route('/play/<int:num>/<color>')
-def display_color(num, color):
-    id = int(num)
-    return render_template('index1.html', num=id, color=color)
-
-
-if __name__ == "__main__":   # Ensure this file is being run directly and not from a different module
-    app.run(debug=True)    # Run the app in debug mode.
-#
+if __name__ == "__main__":   
+    app.run(debug=True)

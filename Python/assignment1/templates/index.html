@@ -3,38 +3,18 @@
 
 <head>
     <title>Playgound</title>
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<style>
-    .container {
-        width: 950px;
-        margin: 0px auto;
-        padding: 20px;
-    }
 
-    .sub-content {
-        height: 200px;
-        width: 210px;
-        background-color: dodgerblue;
-        margin: 10px;
-        border: solid black 2px;
-    }
-
-    .row {
-        display: flex;
-        justify-content: space-between;
-
-        /* TODO - what should go here? */
-    }
-</style>
 
 <body>
     <div class="container">
         <div class="row">
-            {%if num < 3 %} {% num=3 %} {% endif %} {% for i in range(10) %} <div class="sub-content">
+            {% for i in range(num) %}
+            <div class="sub-content">
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
     </div>
 </body>
 
