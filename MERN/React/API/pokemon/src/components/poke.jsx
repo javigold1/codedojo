@@ -18,10 +18,10 @@ const PokeComponent = (props) => {
     return(
         <div>
             <button>Fetch Pokemon</button>
-            {responseData.map((pookemon, index) => {
+            {responseData.map((pokemon, index) => {
                 return(
                 <div key={index}>
-                    <p>{pookemon.name}</p>
+                    <p>{pokemon.name}</p>
                 </div>
             )})}
         </div>
