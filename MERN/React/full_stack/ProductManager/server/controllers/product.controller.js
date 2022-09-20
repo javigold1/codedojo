@@ -22,6 +22,6 @@ module.exports.getAllProducts = (request, response) => {
 }
 module.exports.getProduct = (request, response) => {
     Product.findOne({_id:request.params.id})
-        .then(person => response.json(product))
+        .then(product => response.json(product))
         .catch(err => response.json(err))
 }
