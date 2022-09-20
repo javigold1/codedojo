@@ -14,3 +14,9 @@ module.exports.createPerson = (request, response) => {
         .then(person => response.json(person))
         .catch(err => response.json(err));
 }
+
+module.exports.getAllPeople = (request, response) => {
+    Person.find({})
+        .then(persons => response.json(persons))
+        .catch(err => response.json(err))
+}
