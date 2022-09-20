@@ -7,7 +7,7 @@ const Detail = (props) => {
     const { id } = useParams();
     
     useEffect(() => {
-        axios.get('http://localhost:8000/api/product/' +id)
+        axios.get('http://localhost:8000/api/products/' +id)
             .then(res => setProduct(res.data))
             .catch(err => console.error(err));
     }, []);
